@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Lora:wght@400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --text: #edeef2;
+    --background: #0f1015;
+    --primary: #cbc5b4;
+    --secondary: #232d1f;
+    --accent: #a19778;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: var(--background);
+    color: var(--text);
+}
+/*                         navbar                         */
+#logo>a{
+    text-decoration: none
+}
+#navbar{
+    position:sticky;
+    top: 0;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    background-color: var(--background);
+    opacity: 0.99;
+}
+#profile-alllink>a{
+    color: var(--accent);
+    padding:0px 15px;
+}
+#profile-alllink{
+    justify-content: end;
+    display: flex;
+}
+#name-logo{
+    color: var(--text);
+    font-weight:400;
+    font-family: 'Lora', serif;
+    padding: 20px;
+}
+/*                          welcome-section                  */
+#greeting{
+    font-family: 'Poppins',sans-serif;
+    font-weight: 600;
+}
+#name{
+    border-bottom:3px solid var(--accent);
+}
+#welcome-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#profile-img>img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    z-index:-1;
+    border-radius:0px 0px 10px 10px;
+}
+#introduction{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+#contact-anchor,#about,#greeting{
+    margin-top: 20px;
+}
+#about{
+    width: 80%;
+    font-family: 'Lora', serif;
+
+}
+#contact-anchor{
+    display: inline-block;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-family: 'Lora', serif;
+    color: var(--text);
+    border-bottom: 2px solid var(--accent);
+    margin-bottom: 15px;
+}
+#contact-anchor:hover{
+    color: var(--accent);
+    border-bottom: 2px solid var(--text);
+}
+/*                          skills                      */
+#header-skill,#header-projects{
+    margin: 0 auto;
+    padding: 10px;
+    border-top: 1px solid var(--accent);
+    font-weight: 500;
+    font-size: 30px;
+    margin-top: 5px;
+}
+#skill-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    flex-wrap: wrap;
+    padding: 15px;
+}
+.skillcards{
+    width: 200px;
+    height: 120px;
+    background-color: #232d1f20;
+    margin:10px;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#skill-title,#experience{
+    font-family: 'Lora', serif;
+}
+#skills{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+/*                        projects                     */
+#project-card{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+.project-tile{
+    width: 300px;
+    height: 350px;
+    background-color: #232d1f30;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    margin:10px 10px;
+}
+.project-tile>img{
+    width: 100%;
+    object-fit: contain;
+}
+#skill-used{
+    display: flex;
+}
+#skill-used>p{
+    display: inline-block;
+    padding: 5px;
+    background-color: var(--secondary);
+    margin:0px 2px;
+    border-radius: 5px;
+    font-family: 'Lora', serif;
+}
+#source>a{
+    display: inline-block;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-family: 'Lora', serif;
+    color: var(--text);
+    border-bottom: 2px solid var(--accent);
+    margin-bottom: 15px;
+    margin: 0 4px;
+}
+h3{
+    font-family: 'Lora', serif;
+}
+#source>a:hover{
+    color: var(--accent);
+    border-bottom: 2px solid var(--text);
+}
+/*                        contact                      */
+#contact{
+    width: 100%;
+    /* min-height: 40vh; */
+    background-color:var(--secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin-top: 30px;
+}
+#contact-intro,#contact-form{
+    width: 50%;
+}
+#contact-intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+#form-box{
+    display: block;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+#contact-article{
+    max-width: 400px;
+}
+input[type],textarea{
+    width:80%;
+    max-width: 400px;
+    padding: 5px;
+    font-family:'Lora', serif;
+    margin: 15px;
+    background: transparent;
+    border: 0;
+    color:var(--text);
+    border-bottom: 2px solid var(--accent);
+    outline: 0;
+}
+input[type="submit"]{
+    display: inline-block;
+    max-width: 80px;
+    border: 0;
+    background: transparent;
+    font-weight: bold;
+    font-size: large;
+    color:var(--text);
+    border-bottom: 2px solid var(--accent);
+}
+input[type="submit"]:hover{
+    color: var(--accent);
+    border-bottom: 2px solid var(--text);
+}
+textarea{
+    min-height: 100px;
+    resize: vertical;
+}
+#contact-article>h2{
+    font-size: 48px;
+}
+#contact-article>h2,#contact-article>p{
+    font-family:'Lora', serif;
+}
+/*                        media query                  */
+@media screen and (max-width: 500px) {
+    #navbar{
+        flex-direction: column;
+        padding: 10px;
+    }
+    #profile-alllink{
+        justify-content: center;
+        align-items: center;
+    } 
+    #logo,#profile-alllink{
+        width: 100%;
+    }
+    #name-logo{
+        text-align: center;
+        padding:5px;
+    }
+    #welcome-section{
+        flex-direction: column-reverse;
+        min-height: 80vh;
+    }
+    #introduction{
+        align-items: start;
+        justify-content: center;
+    }
+    #profile-img{
+        width:80%;
+        height:100%;
+        object-fit: cover;
+    }
+    #greeting{
+        text-align: center;
+        width: 100%;
+    }
+    #about{
+        margin:16px auto 0px;
+        text-align: center;
+    }
+    #profile{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #header-skill,#header-projects,#project-card{
+        width: 90%;
+    }
+    #skill-card{
+        width: 100%;
+    }
+    .skillcards{
+        width: 150px;
+        height: 110px;
+    }
+    #project-card{
+        justify-content: center;
+    }
+    #contact{
+        flex-direction: column;
+    }
+    #contact-intro,#contact-form{
+        width: 70%;
+    }
+    input[type],textarea{
+        width:100%;
+    }
+}
+@media screen and ((min-width: 501px) and (max-width:900px)) {
+    #logo,#profile-alllink{
+        width: 45%;
+    }
+    #introduction{
+        width: 45%;
+    }
+    #profile-img{
+        width:45%;
+        height:100%;
+    }
+    #greeting{
+        font-size: 24px;
+        text-wrap: wrap;
+    }
+    #introduction{
+        align-items:center;
+    }
+    #welcome-section{
+        height: 70vh;
+        padding: 20px;
+    }
+    #header-skill,#header-projects{
+        width: 90%;
+    }
+    .skillcards{
+        width: 180px;
+        height: 120px;
+    }
+    #contact-article{
+        width: 60%;
+    }
+}
+@media screen and (min-width: 901px) {
+    #logo,#profile-alllink{
+        width: 40%;
+    }
+    #introduction{
+        width: 40%;
+    }
+    #profile-img{
+        width:40%;
+        height:100%;
+    }
+    #greeting{
+        font-size: 40px;
+    }
+    #introduction{
+        align-items: center;
+    }
+    #welcome-section{
+        height: 88vh;
+        padding: 20px;
+    }
+    #header-skill,#header-projects,#project-card{
+        width: 90%;
+    }
+    #contact-article{
+        width: 60%;
+    }
+}

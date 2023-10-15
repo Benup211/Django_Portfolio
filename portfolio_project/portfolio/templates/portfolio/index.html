@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% block main %}
+    <main>
+        <section id="welcome-section">
+            <div id="introduction">
+                <div id="profile">
+                    <h1 id="greeting">Nice to meet you!<br>I'm <span id="name">Benup Ghimire</span>.</h1>
+                    <p id="about">Based in the Nepal, I'm a Front-end developer passionate about building accessible web apps that user love.</p>
+                    <a href="#contact" id="contact-anchor">CONTACT ME</a>
+                </div>
+            </div>
+            <div id="profile-img">
+                <img src="https://i.postimg.cc/1tLpgk4d/portfolioprofile.png" alt="Profile Picture" loading="eager">
+            </div>
+        </section>
+        <section id="skills">
+            <h2 id="header-skill">Skills</h2>
+            <div id="skill-card">
+                {% for items in skill_list %}
+                <div class="skillcards">
+                    <h2 id="skill-title">{{items.icon|safe}} {{items.skill_name}}</h2>
+                    <p id="experience">{{items.experience}} Years Experience</p>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+        <section id="projects">
+            <h2 id="header-projects">Projects</h2>
+            <div id="project-card">
+                {% for plist in project_list %}
+                <div class="project-tile">
+                    <img src="{{plist.project_img}}" alt="intro project" loading="lazy">
+                    <h3>{{plist.project_name}}</h3>
+                    <div id="skill-used">
+                        {% for pskill in plist.skill_used.all %}
+                        <p>{{pskill.skill_name}}</p>
+                        {% endfor %}
+                    </div>
+                    <div id="source">
+                        <a href="{{plist.project_link|safe}}" target="_blank">View Project</a>
+                        <a href="{{plist.project_code|safe}}" target="_blank">View Code</a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+        </section>
+        <section id="contact">
+            <div id="contact-intro">
+                <article id="contact-article">
+                    <h2>Contact</h2>
+                    <p>I would love to hear about your project and how I could help. Please fill in the form, and I'll get back to you as soon as possible.</p>
+                </article>
+            </div>
+            <div id="contact-form">
+                <form action="{% url 'portfolio:index' %}" method="post" id="form-box">
+                    {% csrf_token %}
+                    <input name="name" type="text" placeholder="NAME" required>
+                    <input name="email" type="email" placeholder="EMAIL" required>
+                    <textarea name="MESSEGE" maxlength="300" id=""placeholder="Enter your message" required></textarea>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </section>
+    </main>
+{% endblock %}
